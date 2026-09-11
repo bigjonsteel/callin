@@ -1,0 +1,152 @@
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/inter-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Barlow Condensed";
+  src: url("./assets/barlow-condensed-latin-800.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: dark;
+  font-family: "Inter", Arial, sans-serif;
+  color: #f6f6f7;
+  background: #0b0c0e;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: clamp(1rem, 5vh, 3rem) 1rem;
+  display: grid;
+  place-items: center;
+}
+
+.call-in {
+  width: 100%;
+  max-width: 30rem;
+  padding: 1.75rem;
+  background: #111214;
+  border: 1px solid #37383f;
+  border-radius: 1.25rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .75rem;
+}
+
+.brand-mark {
+  flex-shrink: 0;
+  padding: .3rem .55rem;
+  border: 1px solid #37383f;
+  font-family: "Barlow Condensed", Impact, "Arial Narrow", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -.04em;
+  line-height: 1.3;
+}
+
+.brand-copy { min-width: 0; }
+.brand p { margin: 0; }
+
+.brand-name {
+  font-size: .8125rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.brand-tagline {
+  margin-top: .3rem !important;
+  font-size: .75rem;
+  line-height: 1.6;
+  letter-spacing: .035em;
+  text-transform: uppercase;
+  color: #b4b5be;
+}
+
+.intro { padding: 1.75rem 0 1.5rem; text-align: center; }
+
+.eyebrow {
+  margin: 0 0 .625rem;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .15em;
+  line-height: 1.5;
+  color: #b4b5be;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0 0 1rem;
+  font-family: "Barlow Condensed", Impact, "Arial Narrow", sans-serif;
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -.02em;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+.subtitle { margin: 0; font-size: 1rem; line-height: 1.6; color: #b4b5be; }
+.options { display: grid; gap: .75rem; }
+.option { padding: 1.125rem; background: #1c1d21; border: 1px solid #37383f; border-radius: .75rem; min-width: 0; }
+h2 { margin: 0 0 .5rem; font-size: 1.125rem; font-weight: 700; letter-spacing: -.02em; }
+.description { margin: 0 0 .75rem; font-size: .875rem; line-height: 1.65; color: #b4b5be; overflow-wrap: anywhere; }
+.requirement { display: flex; align-items: center; gap: .4rem; margin: 0 0 .875rem; font-size: .875rem; line-height: 1.5; overflow-wrap: anywhere; }
+.requirement span { min-width: 0; }
+.requirement strong { font-weight: 700; letter-spacing: .05em; }
+.icon { width: 1rem; height: 1rem; flex-shrink: 0; }
+.discord .requirement { color: #c9cdff; }
+
+.join-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  min-height: 3.25rem;
+  padding: .875rem 1rem;
+  border-radius: .3125rem;
+  background: #f3f3f4;
+  color: #18191d;
+  font-size: .875rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  transition: background-color 120ms ease;
+}
+
+.join-button:hover { background: #dcdce0; }
+.discord .join-button { background: #5865f2; color: #fff; }
+.discord .join-button:hover { background: #4752c4; }
+.join-button:focus-visible { outline: 3px solid #e2c878; outline-offset: 4px; }
+.arrow { width: 1.125rem; height: 1.125rem; flex-shrink: 0; }
+
+@media (max-width: 380px) {
+  body { padding: 1rem .625rem; }
+  .call-in { padding: 1.25rem; }
+  .brand { gap: .5rem; }
+  .brand-tagline { letter-spacing: 0; }
+  .option { padding: 1rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .join-button { transition: none; }
+}

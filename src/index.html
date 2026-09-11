@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#111214">
+    <meta name="description" content="Call in to Big Jon Steel's show. Choose VDO.Ninja or join the Discord Stage channel.">
+    <meta property="og:title" content="Call in to the show | Big Jon Steel">
+    <meta property="og:description" content="Choose how to call in: VDO.Ninja or Discord.">
+    <meta property="og:type" content="website">
+    <title>Call in to the show | Big Jon Steel</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="call-in" aria-labelledby="page-title">
+      <header class="brand">
+        <span class="brand-mark" aria-hidden="true">BJS</span>
+        <div class="brand-copy">
+          <p class="brand-name">Big Jon Steel</p>
+          <p class="brand-tagline">Reactions · Culture · Religion</p>
+        </div>
+      </header>
+
+      <div class="intro">
+        <p class="eyebrow">Big Jon Steel debates</p>
+        <h1 id="page-title">Call in to the show.</h1>
+        <p class="subtitle">Choose how to call in.</p>
+      </div>
+
+      <div class="options">
+        <section class="option" aria-labelledby="vdo-title">
+          <h2 id="vdo-title">VDO.Ninja</h2>
+          <p class="description">Connect to the call-in room through your browser.</p>
+          <p class="requirement" id="vdo-password">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="5"/><path d="m11.5 11.5 9 9M17 17l3-3M14 14l3-3"/></svg>
+            <span>Password: <strong>{{vdoNinjaPassword}}</strong></span>
+          </p>
+          <a class="join-button" href="{{vdoNinjaUrl}}" aria-describedby="vdo-password">
+            <span>Call in with VDO.Ninja</span>
+            <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
+          </a>
+        </section>
+
+        <section class="option discord" aria-labelledby="discord-title">
+          <h2 id="discord-title">Discord</h2>
+          <p class="description">Join the server, then head to the “{{discordChannelName}}” Stage channel.</p>
+          <p class="requirement" id="discord-requirement">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></svg>
+            <span>Discord account required</span>
+          </p>
+          <a class="join-button" href="{{discordInviteUrl}}" aria-describedby="discord-requirement">
+            <span>Join the Discord server</span>
+            <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
+          </a>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

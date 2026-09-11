@@ -1,0 +1,14 @@
+{
+  "name": "bjs-callin-landing-page",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Big Jon Steel's static call-in landing page",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/serve.mjs",
+    "preview:lan": "node scripts/serve.mjs --lan",
+    "test": "node --test"
+  }
+}
