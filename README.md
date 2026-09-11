@@ -15,7 +15,7 @@ The approved compact design, with working VDO.Ninja and Discord links. The gener
    | `discordChannelName` | The Stage channel name displayed on the page |
 
 3. Keep the existing commas, field names, and braces. Paste plain URLs: use `&`, not `\&` or `&amp;`.
-4. Click **Commit changes**, enter a short description, and save to `main` (or use a pull request if branch rules require it).
+4. Click **Commit changes**, enter a short description, and save to `master` (or use a pull request if branch rules require it).
 5. Open **Actions → Publish call-in page**. Wait for the green check, then refresh the public page and check the link.
 
 If the build fails, the existing live version stays published. Open the failed action to see which setting needs fixing. Format checks cannot detect a revoked Discord invite or confirm a room password: verify those in the respective service.
@@ -25,13 +25,13 @@ The displayed password is public and changing it here does **not** change the pa
 ## First publication on GitHub Pages
 
 1. Create a public repository in the intended owner's GitHub account (GitHub Free supports Pages for public repositories).
-2. Upload/push this project, including `.github/workflows/pages.yml`, to its `main` branch.
+2. Upload/push this project, including `.github/workflows/pages.yml`, to its `master` branch.
 3. In **Settings → Pages → Build and deployment**, select **GitHub Actions** as the source.
-4. Under **Actions → Publish call-in page**, click **Run workflow** on `main` if the first run happened before Pages was enabled.
+4. Under **Actions → Publish call-in page**, click **Run workflow** on `master` if the first run happened before Pages was enabled.
 5. After it succeeds, the Pages address is shown under **Settings → Pages** and in the deployment.
 6. Point the desired short link to that address after checking the published page.
 
-The workflow runs tests and builds on pull requests, and publishes changes to `main`. A valid settings edit automatically republishes the page. Neither editor needs to install Node or run commands for routine GitHub edits.
+The workflow runs tests and builds on pull requests, and publishes changes to `master`. A valid settings edit automatically republishes the page. Neither editor needs to install Node or run commands for routine GitHub edits.
 
 ## Preview locally
 
